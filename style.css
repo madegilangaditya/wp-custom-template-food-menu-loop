@@ -1,0 +1,201 @@
+/* 
+Theme Name: Zoie Cafe
+Theme URI: 
+Description: WordPress theme for Zoie Cafe
+Author: RockIT Digital
+Author URI: http://rockitdigital.com.au/
+Template: hello-elementor
+Version: 1.0.1
+Text Domain: zoiecafe
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/* Header */
+.zc-social-icon .elementor-social-icons-wrapper>span:first-child>.elementor-social-icon{
+    width: 25px;
+    height: 26px;
+}
+
+/* background section */
+.rainbow-yellow-pink{
+    background: linear-gradient(to bottom, var(--e-global-color-accent) 0, var(--e-global-color-4b41095) 60%, var(--e-global-color-3e35095) 100%);
+}
+
+/* Menu listing Food type Styling */
+.zoiecafe-food-type{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0;
+}
+
+.zoiecafe-food-menu-type-listing-wrapper .zoiecafe-food-menu-type-listing-item li.zoiecafe-food-type-item.active>a {
+    color: #67D2DF;
+}
+
+.zoiecafe-food-menu-listing__item.zoiecafe-food.food-type-active {
+    display:flex;
+}
+
+.zoiecafe-food-menu-listing__item.zoiecafe-food{
+    display:none;
+}
+
+.zoiecafe-food-menu-type-listing-wrapper:before {
+    content:'';
+    position:absolute;
+    width:100%;
+    height:2px;
+    background: linear-gradient(to left, var(--e-global-color-accent) 0, var(--e-global-color-4b41095) 60%, var(--e-global-color-3e35095) 100%);
+    bottom:-20px;
+}
+
+.zoiecafe-food-menu-type-listing-wrapper{
+    position:relative;
+}
+
+.zoiecafe-food-type-item{
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.zoiecafe-food-type-item a,
+.zoiecafe-food-type-item span{
+    vertical-align: middle;
+}
+
+.zoiecafe-food-type-item .img-hover{
+    display: none;
+}
+
+.zoiecafe-food-type-item.active .img-hover{
+    display:inline-block;
+    margin-right:-3px;
+}
+
+.zoiecafe-food-type-item.active .img-normal{
+    display:none;
+}
+
+/* Food menu listing content Styling */
+
+.zoiecafe-food-menu-listing-wrapper p{
+    margin-bottom:0
+}
+
+.zoiecafe-food-menu-listing__title{
+    margin-top: 0;
+}
+
+.zoiecafe-food-menu-listing__eat-style{
+    display: inline-block;
+}
+
+.zoiecafe-food-menu-download-wrap{
+    text-align: center;
+}
+
+.zoiecafe-food-menu-listing__content-item ul{
+    padding-left: 20px;
+}
+
+
+/* Slider style */
+.zoie-image__carousel .slick-next:before,
+.zoie-image__carousel .slick-prev:before{
+    content:'<';
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 0;
+}
+
+.zoie-image__carousel .slick-next:before{
+    content: '>';
+}
+
+/* Tab style */
+.zoie-event-tab .elementor-tab-title {
+	padding: 0 25px;
+	background: url("https://zoiecafe.vincere.site/wp-content/uploads/2021/11/Bracket-Right.png") no-repeat center;
+}
+.zoie-event-tab .elementor-tab-title[data-tab="2"]{
+	background: url("https://zoiecafe.vincere.site/wp-content/uploads/2021/11/bg-tab2.png") no-repeat center;
+}
+.zoie-event-tab .elementor-tab-title[data-tab="3"]{
+	background: url("https://zoiecafe.vincere.site/wp-content/uploads/2021/11/bg-tab3.png") no-repeat center;
+}
+
+@media all and (min-width:768px){
+    .zoiecafe-food-menu-listing-wrapper,
+    .zoiecafe-food-menu-type-listing-wrapper,
+    .zoiecafe-food-menu-listing__item{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .zoie-image__carousel .slick-prev{
+        left: -35px;
+    }
+
+    .zoiecafe-food-menu-type-listing-wrapper{
+        align-items: center;
+    }
+
+    .zoiecafe-food-menu-download-wrap{
+        width: 90px;
+    }
+
+    .zoiecafe-food-menu-listing__item{
+        gap: 30px;
+    }
+
+    .zoiecafe-food-menu_featured-image{
+        position: absolute;
+        right: 0;
+        bottom: -15px;
+        width: 50%;
+    }
+
+    .zoiecafe-food-menu-listing-wrapper__item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex: 0 0 100%;
+        column-gap: 30px;
+    }
+
+    .zoiecafe-food-type-item {
+        font-size: 40px;
+    }
+
+    
+}
+
+
+@media all and (max-width:1024px){
+    .zoie-image__carousel .slick-prev{
+        left: 0;
+        z-index: 1;
+    }
+
+    .zoie-image__carousel .slick-next{
+        right: 15px;
+    }
+}
+
+@media all and (max-width:767px){
+    .zoie-image__carousel img{
+        width: 100% !important;
+    }
+	.zoie-event-tab .elementor-tab-title{
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+    .zoiecafe-food-menu-listing__item.zoiecafe-food.food-type-active {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
